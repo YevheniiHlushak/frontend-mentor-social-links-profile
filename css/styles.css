@@ -27,10 +27,10 @@ body {
 }
 
 main {
-  height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
-  row-gap: 16px;
+  row-gap: 1rem;
   justify-content: center;
   align-items: center;
 }
@@ -82,10 +82,10 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  row-gap: 24px;
+  row-gap: 1.5rem;
   background-color: var(--color-grey-800);
-  border-radius: 12px;
-  font-size: 14px;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
 }
 
 .profile-card__thumb {
@@ -94,12 +94,13 @@ p {
 }
 
 .profile-card__name {
-  font-size: 24px;
-  margin-bottom: 4px;
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
   font-weight: 600;
 }
 
 .profile-card__location {
+  margin-bottom: 1.5rem;
   font-size: inherit;
   color: var(--color-accent);
   font-weight: 700;
@@ -108,7 +109,7 @@ p {
 .profile-card__list {
   display: flex;
   flex-direction: column;
-  row-gap: 16px;
+  row-gap: 1rem;
   width: 100%;
 }
 
@@ -116,11 +117,14 @@ p {
   display: inline-flex;
   justify-content: center;
   width: 100%;
-  padding-block: 12px;
+  max-width: 17.4375rem;
+  padding-block: 0.75rem;
   background-color: var(--color-grey-700);
   font-weight: 700;
-  border-radius: 8px;
-  transition-duration: var(--transition-duration);
+  border-radius: 0.5rem;
+  transition:
+    color var(--transition-duration),
+    background-color var(--transition-duration);
 }
 
 .profile-card__link:hover,
@@ -129,24 +133,37 @@ p {
   background-color: var(--color-accent);
 }
 
+.profile-card__link:focus {
+  outline: 0.1875rem solid var(--color-light);
+  outline-offset: 0.125rem;
+}
+
 /* mobile */
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 23.4375rem) {
   .profile-card {
-    padding: 24px;
+    padding: 1.5rem;
+    width: 17.4375rem;
   }
 }
 
 /* tablet & desktop */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .profile-card {
-    padding: 40px;
+    padding: 2.5rem;
+    width: 24rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-card__link {
+    transition: none;
   }
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 0.6875rem;
   text-align: center;
 }
 .attribution a {
@@ -155,9 +172,9 @@ p {
 
 .visually-hidden {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+  width: 0.0625rem;
+  height: 0.0625rem;
+  margin: -0.0625rem;
   border: 0;
   padding: 0;
   white-space: nowrap;
