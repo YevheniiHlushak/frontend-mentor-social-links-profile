@@ -29,6 +29,7 @@ main {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  row-gap: 16px;
   justify-content: center;
   align-items: center;
 }
@@ -86,8 +87,9 @@ p {
   font-size: 14px;
 }
 
-.profile-card__image {
+.profile-card__thumb {
   border-radius: 50%;
+  overflow: hidden;
 }
 
 .profile-card__name {
