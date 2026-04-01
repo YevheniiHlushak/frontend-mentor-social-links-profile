@@ -23,6 +23,7 @@ body {
   background-color: var(--color-grey-900);
   color: var(--color-light);
   text-align: center;
+  line-height: 1.5;
 }
 
 main {
@@ -108,7 +109,7 @@ p {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
-  align-items: stretch;
+  width: 100%;
 }
 
 .profile-card__link {
