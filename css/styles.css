@@ -7,6 +7,32 @@
   --transition-duration: 200ms;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-grey-900);
+  color: var(--color-light);
+  text-align: center;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @font-face {
   font-family: "Inter";
   src: url("../fonts/static/Inter-Bold.ttf") format("truetype");
@@ -48,19 +74,6 @@ p {
   margin: 0;
 }
 
-body {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  row-gap: 16px;
-  font-family: "Inter", sans-serif;
-  background-color: var(--color-grey-900);
-  color: var(--color-light);
-  text-align: center;
-}
-
 /* common */
 
 .profile-card {
@@ -87,10 +100,6 @@ body {
   font-size: inherit;
   color: var(--color-accent);
   font-weight: 700;
-}
-
-.profile-card__position {
-  font-size: inherit;
 }
 
 .profile-card__list {
